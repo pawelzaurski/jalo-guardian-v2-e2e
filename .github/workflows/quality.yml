@@ -1,0 +1,27 @@
+name: Quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout immutable action
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install parser dependency
+        run: python3 -m pip install --disable-pip-version-check --no-input 'PyYAML==6.0.3'
+      - name: Compile Guardian V2 harness
+        run: python3 -m py_compile scripts/guardian_v2_policy.py scripts/guardian_v2_github_e2e.py scripts/test_guardian_v2_github_e2e.py
+      - name: Run contract tests
+        run: python3 scripts/test_guardian_v2_github_e2e.py

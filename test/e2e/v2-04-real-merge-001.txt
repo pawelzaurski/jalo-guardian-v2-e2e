@@ -1,0 +1,7 @@
+JALO Guardian 2.0 V2-04 real GitHub E2E candidate
+purpose=harmless_fixture_only
+production_effect=false
+secret_access=false
+cross_repo_write=false
+expected_required_checks=guardian-pr-gate,quality,gitleaks
+stale_sha_negative_control=second_commit

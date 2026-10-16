@@ -1,0 +1,4 @@
+Guardian V2-04 protected E2E final candidate
+native_ruleset=Protect main
+required_checks=guardian-pr-gate,quality,gitleaks
+production_effect=false

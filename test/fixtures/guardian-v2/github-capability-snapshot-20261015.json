@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-10-15",
+  "production_repository": "pawelzaurski/jalo",
+  "owner_type": "User",
+  "visibility": "private",
+  "enterprise_cloud_org": false,
+  "merge_queue_eligible": false,
+  "expected_merge_mode": "SERIALIZED_PROTECTED_MERGE",
+  "ruleset_id": 23492977,
+  "required_checks": [
+    "guardian-pr-gate",
+    "quality",
+    "gitleaks"
+  ],
+  "source": "GitHub repository + ruleset API and current GitHub merge queue eligibility documentation"
+}

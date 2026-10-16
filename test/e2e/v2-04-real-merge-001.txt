@@ -4,3 +4,4 @@ production_effect=false
 secret_access=false
 cross_repo_write=false
 expected_required_checks=guardian-pr-gate,quality,gitleaks
+stale_sha_negative_control=second_commit
